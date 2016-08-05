@@ -49,7 +49,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-		receivedElementObj.setAttribute('style', 'display:inline;');
+		receivedElementObj.setAttribute('style', 'visibility:visible');
 
         console.log('Received Event: ' + id);
     }	
