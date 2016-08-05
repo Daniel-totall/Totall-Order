@@ -34,11 +34,10 @@ var app = {
     onDeviceReady: function() {	
         var storage = window.localStorage;		
 		var ipservidor = storage.getItem("ipservidor");
+		app.receivedEvent('deviceready');
 		if (ipservidor) {
 			window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 			window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/order","_self", 'location=no');		 
-		} else {
-			app.receivedEvent('deviceready');
 		}
     },
     // Update DOM on a Received Event
