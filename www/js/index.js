@@ -62,4 +62,5 @@ function setIP() {
 	alert("Endereço "+ipservidor+" incluso com sucesso");
 	window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 	window.open("http://"+ipservidor+":8082/TotallPos/servlet/order","_self", 'location=no');	 
+	alert("redirecionado");
 }
