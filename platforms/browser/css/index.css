@@ -94,13 +94,12 @@ h1 {
 
 .event.received {
     background-color:#4B946A;
-    display:none;	
+    display:none;
 }
 
 .campo.received {
     visibility:hidden;	
 }
-
 
 @keyframes fade {
     from { opacity: 1.0; }

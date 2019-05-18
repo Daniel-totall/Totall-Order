@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+    // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
@@ -25,12 +26,12 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-		document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
+    // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {	
         var storage = window.localStorage;		
 		var ipservidor = storage.getItem("ipservidor");
@@ -59,7 +60,7 @@ function setIP() {
 	var ipservidor = document.getElementsByName("ipservidor")[0].value
 	var storage = window.localStorage;
 	storage.setItem("ipservidor", ipservidor);
-	alert("EndereÃ§o "+ipservidor+" incluso com sucesso");
+	alert("Endereço "+ipservidor+" incluso com sucesso");
 	window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 	window.open("http://"+ipservidor+":8082/TotallPos/servlet/order","_self", 'location=no');	 
 }
